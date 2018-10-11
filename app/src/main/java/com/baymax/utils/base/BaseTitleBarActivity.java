@@ -1,6 +1,5 @@
 package com.baymax.utils.base;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +9,7 @@ import android.widget.TextView;
 import com.baymax.utils.R;
 
 
-public class BaseTitleBarActivity extends AppCompatActivity {
+public abstract class BaseTitleBarActivity extends BaseActivity {
 
     private FrameLayout mContainer;
     private View mBackView;
