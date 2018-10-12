@@ -22,6 +22,23 @@ public class TextUtil {
     }
 
     /**
+     * 判断一个字符是否为空或者全是空格
+     * @param s 待检测的字符串
+     * @return Returns true if the parameter is null or contains only whitespace
+     */
+    public static boolean isBlank(final CharSequence s) {
+        if (s == null) {
+            return true;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (!Character.isWhitespace(s.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
      * 判断一个字符串是否是邮箱格式
      * 注：目前只是简单的通过字符串中是否含有@来判断
      *

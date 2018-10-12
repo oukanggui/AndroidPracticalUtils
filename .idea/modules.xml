@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidPracticalUtils.iml" filepath="$PROJECT_DIR$/AndroidPracticalUtils.iml" />
+      <module fileurl="file://E:\project\AndroidPracticalUtils\AndroidPracticalUtils.iml" filepath="E:\project\AndroidPracticalUtils\AndroidPracticalUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\project\AndroidPracticalUtils\app\app.iml" filepath="E:\project\AndroidPracticalUtils\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/utilslib/utilslib.iml" filepath="$PROJECT_DIR$/utilslib/utilslib.iml" />
+      <module fileurl="file://E:\project\AndroidPracticalUtils\utilslib\utilslib.iml" filepath="E:\project\AndroidPracticalUtils\utilslib\utilslib.iml" />
     </modules>
   </component>
 </project>
