@@ -12,4 +12,9 @@ Text文本操作工具类TextUtil，目前支持功能如下--持续更新中：
 2、字符串是否全为空格判断<br>
 3、邮箱格式判断<br>
 4、手机号码判断<br>
----持续更新中<br>
+#### 3、SharedPreferencesUtil
+SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一致，目前支持功能如下：<br>
+1、save（put）与get：与原生保持一致，支持保存和获取int、float、long、boolean、String、Set<String><br>
+2、clear：清空SharedPreferences内容<br>
+3、remove：支持删除remove相应key对应的值<br>
+---持续更新中
