@@ -27,8 +27,8 @@ Toast操作工具类，提供非阻塞式显示Toast,防止出现连续点击Toa
 1、Log打印到控制台<br>
 2、Log输出到文件保存进行持久化存储<br>
 ！！使用注意事项：<br>
-1)在使用LogUtil前需要调用init方法进行初始化（建议在Application中进行初始化），LogUtil.init(Context context, boolean isShowLog, boolean isWriteToFile) , 提供了两个初始化开关参数：<br>
+1) 在使用LogUtil前需要调用init方法进行初始化（建议在Application中进行初始化），LogUtil.init(Context context, boolean isShowLog, boolean isWriteToFile) , 提供了两个初始化开关参数：<br>
 a、isShowLog，是否打印日志，默认关闭<br>
 b、isWriteToFile，日志是否写到文件，默认关闭<br>
-2)由于Log需要记录到文件中进行持久储存，需要在Manifest中申请文件写权限android.permission.WRITE_EXTERNAL_STORAGE<br>
+2) 由于Log需要记录到文件中进行持久储存，需要在Manifest中申请文件写权限android.permission.WRITE_EXTERNAL_STORAGE<br>
 ---持续跟新中
