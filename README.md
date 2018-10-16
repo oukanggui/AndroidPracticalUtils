@@ -18,7 +18,7 @@ SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一
 2、clear：清空SharedPreferences内容<br>
 3、remove：支持删除remove相应key对应的值<br>
 #### 4、ToastUtil
-Toast操作工具类，提供非阻塞式显示Toast,防止出现连续点击Toast时的显示问题，目前支持功能如下：<br>
+Toast操作工具类，提供非阻塞式显示Toast，防止出现连续点击Toast时的显示问题，目前支持功能如下：<br>
 1、Toast显示<br>
 2、Toast取消<br>
 注：如果想要处理由于连续点击，导致Toast重复显示相同内容的问题或者退出当前页面后，Toast还会显示的问题，可以参考我之前的博客文章的解决方案：[完美解决Android中Toast重复显示相同内容的问题](https://blog.csdn.net/okg0111/article/details/79920375)
