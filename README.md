@@ -36,4 +36,8 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 1、获取当前系统时间（格式为yyyy-MM-dd HH:mm:ss的字符串）<br>
 2、判断两个日期是否为同一天（yyyy-MM-dd HH:mm:ss格式的日期）<br>
 3、判断两个时间之间的相隔的秒数、分钟数、小时数以及天数<br>
-----持续更新中<br>
+#### 7、SoftInputUtil
+软键盘操作工具类SoftInputUtil：支持功能如下：<br>
+1、软键盘显示<br>
+2、软键盘隐藏（收起）<br>
+---持续更新中
