@@ -23,13 +23,16 @@ public class ToastUtil {
      * @param duration Toast展示时长控制，有两个值：Toast.LENGTH_SHORT（2秒）、Toast.LENGTH_LONG（3.5秒）
      */
     public static void showToast(final Context context, final CharSequence text, final int duration) {
-        if (mToast == null) {
-            mToast = Toast.makeText(context, text, duration);
+        ToastRunnable toastRunnable = new ToastRunnable(context, text, duration);
+        if (context instanceof Activity) {
+            final Activity activity = (Activity) context;
+            if (activity != null && !activity.isFinishing()) {
+                activity.runOnUiThread(toastRunnable);
+            }
         } else {
-            mToast.setText(text);
-            mToast.setDuration(duration);
+            Handler handler = new Handler(context.getMainLooper());
+            handler.post(toastRunnable);
         }
-        mToast.show();
     }
 
     /**
@@ -55,6 +58,29 @@ public class ToastUtil {
                     mToast.cancel();
                 }
             });
+        }
+    }
+
+    private static class ToastRunnable implements Runnable {
+        private Context context;
+        private CharSequence text;
+        private int duration;
+
+        public ToastRunnable(Context context, CharSequence text, int duration) {
+            this.context = context;
+            this.text = text;
+            this.duration = duration;
+        }
+
+        @Override
+        public void run() {
+            if (mToast == null) {
+                mToast = Toast.makeText(context, text, duration);
+            } else {
+                mToast.setText(text);
+                mToast.setDuration(duration);
+            }
+            mToast.show();
         }
     }
 }
