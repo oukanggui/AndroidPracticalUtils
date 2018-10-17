@@ -60,3 +60,8 @@ App相关工具操作类，支持功能如下：<br>
 2、获取设备IMEI号<br>
 3、获取SIM卡IMSI号<br>
 4、获取设备MAC地址<br>
+#### 12、SystemUtil
+System操作工具类SystemUtil,目前支持功能如下：<br>
+1、判断SD卡是否可用<br>
+2、获取系统型号、版本号以及系统SDK版本号信息<br>
+3、判断两次点击之间是否存在快速点击（支持重置）<br>
