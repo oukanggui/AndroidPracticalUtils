@@ -65,3 +65,7 @@ System操作工具类SystemUtil,目前支持功能如下：<br>
 1、判断SD卡是否可用<br>
 2、获取系统型号、版本号以及系统SDK版本号信息<br>
 3、判断两次点击之间是否存在快速点击（支持重置）<br>
+#### 13、RunnableUtil
+Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行效率，支持如下功能：<br>
+1、支持Runnable任务task立即以及排队执行<br>
+-----支持更新中
