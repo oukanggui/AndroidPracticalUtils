@@ -81,9 +81,9 @@ public class LogUtil {
         mIsWriteToFile = isWriteToFile;
         if (mIsShowLog && mIsWriteToFile) {
             // 判断SD卡是否可用
-            if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            if (SystemUtil.isSDCardAvailable()) {
                 //SD卡可用：SDCard/Log--或者可以定义到自己应用名称的目录下
-                LOG_PATH_SDCARD_DIR = Environment.getExternalStorageDirectory().getAbsoluteFile() + File.separator + LOG_DIRNAME;
+                LOG_PATH_SDCARD_DIR = SystemUtil.getSDCardPath() + File.separator + LOG_DIRNAME;
             } else {
                 //SD卡不可用：data/data/应用的包名/files/
                 LOG_PATH_SDCARD_DIR = mContext.getFilesDir().getAbsolutePath();
@@ -179,7 +179,7 @@ public class LogUtil {
             synchronized (LOG_FILENAME) {
                 if (mLogFile == null) {
                     try {
-                        if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                        if (!SystemUtil.isSDCardAvailable()) {
                             return;
                         }
                         File file = new File(LOG_PATH_SDCARD_DIR);
