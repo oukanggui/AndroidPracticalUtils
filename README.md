@@ -1,9 +1,4 @@
 # AndroidPracticalUtils
-    | Name | Academy | score | 
-    | - | :-: | -: | 
-    | Harry Potter | Gryffindor| 90 | 
-    | Hermione Granger | Gryffindor | 100 | 
-    | Draco Malfoy | Slytherin | 90 |
 ### 一、初衷
 整理Android日常开发中常用的实用工具Utils，所有工具类均放在utilslib这个module里面
 ### 二、支持工具类以及功能说明--支持更新中
