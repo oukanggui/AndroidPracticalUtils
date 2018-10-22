@@ -1,8 +1,8 @@
 # AndroidPracticalUtils
-### 一、初衷
+## 一、初衷
 整理Android日常开发中常用的实用工具Utils，所有工具类均放在utilslib这个module里面
-### 二、支持工具类以及功能说明--支持更新中
-#### 1、JsonUtil：
+## 二、支持工具类以及功能说明--支持更新中
+### 1、JsonUtil：
 Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与Json数据的转换，支持功能如下：<br>
 1、将任意对象或列表转为Json字符串<br>
 2、将Json字符串转换为任意对象或列表(通过泛型)<br>
@@ -17,7 +17,7 @@ Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与
 当将Json字符串转化为List列表时，需要获取List列表具体的Type对象(TypeToken)，可以通过如下方式获取：<br>
 **new TypeToken\<List\<T\>\>(){}.getType()**<br>
 其中T为泛型对象，在实际使用时替换为具体的实体类即可
-#### 2、TextUtil:
+### 2、TextUtil:
 Text文本操作工具类TextUtil，目前支持功能如下：<br>
 1、字符串是否为空判断<br>
 2、字符串是否全为空格判断<br>
@@ -32,7 +32,7 @@ Text文本操作工具类TextUtil，目前支持功能如下：<br>
 |boolean isEmail(String strEmail)|判断一个字符串是否是邮箱格式，目前只是简单的通过字符串中是否含有@来判断|
 |boolean isPhoneNumber(String strPhone)|判断一个字符串是否是11位手机号格式（正则表达式）|
 
-#### 3、SharedPreferencesUtil
+### 3、SharedPreferencesUtil
 SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一致，目前支持功能如下：<br>
 1、save（put）与get：与原生保持一致，支持保存和获取int、float、long、boolean、String、Set\<String\><br>
 2、clear：清空SharedPreferences内容<br>
@@ -56,7 +56,7 @@ SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一
 |void clear(Context context)|清空sp文件保存的内容|
 |void remove(Context context, String key)|移除key对应的内容|
 
-#### 4、ToastUtil
+### 4、ToastUtil
 Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点击Toast时的显示问题，目前支持功能如下：<br>
 1、Toast显示<br>
 2、Toast取消<br>
@@ -69,7 +69,7 @@ Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点
 |void cancelToast()|取消Toast的显示|
 
 注：如果想要处理由于连续点击，导致Toast重复显示相同内容的问题或者退出当前页面后，Toast还会显示的问题，可以参考我之前的博客文章的解决方案：[完美解决Android中Toast重复显示相同内容的问题](https://blog.csdn.net/okg0111/article/details/79920375)
-#### 5、LogUtil
+### 5、LogUtil
 日志Log操作工具类，支持日记打印以及输出到文件中进行存储，便于Log记录与持久化存储：<br>
 1、Log打印到控制台<br>
 2、Log输出到文件保存进行持久化存储<br>
@@ -88,7 +88,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 |void w(String tag, String msg)|打印Warn level log|
 |void e(String tag, String msg)|打印Error level log|
 
-#### 6、TimeUtil
+### 6、TimeUtil
 时间Time操作工具类TimeUtil，目前支持功能如下：<br>
 1、获取当前系统时间（格式为yyyy-MM-dd HH:mm:ss的字符串）<br>
 2、判断两个日期是否为同一天（yyyy-MM-dd HH:mm:ss格式的日期）<br>
@@ -104,7 +104,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 |long twoDateGapHours(String startTime, String endTime)|计算两个日期的时间相差多少小时|
 |long twoDateGapDays(String startTime, String endTime)|计算两个日期的时间相差多少天|
 
-#### 7、SoftInputUtil
+### 7、SoftInputUtil
 软键盘操作工具类SoftInputUtil，支持功能如下：<br>
 1、软键盘显示<br>
 2、软键盘隐藏（收起）<br>
@@ -116,7 +116,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 |void hideSoftInput(Context context, View view)|隐藏系统软键盘，其中View为接收输入内容的View|
 |void hideSoftInput(Activity activity)|隐藏系统软键盘|
 
-#### 8、DimenUtil
+### 8、DimenUtil
 Dimen尺寸操作工具类DimenUtil，支持功能如下：<br>
 1、支持sp与px、dp与px之间的互相换算<br>
 **支持具体功能方法使用说明如下：**<br>
@@ -128,7 +128,7 @@ Dimen尺寸操作工具类DimenUtil，支持功能如下：<br>
 |int sp2px(Context context, float spValue)|转换sp为px|
 |int px2sp(Context context, float pxValue)|转换px为sp|
 
-#### 9、AppUtil
+### 9、AppUtil
 App相关工具操作类，支持功能如下：<br>
 1、获取自身以及第三方应用版本名称以及版本号<br>
 2、检测某应用是否已安装<br>
@@ -146,7 +146,7 @@ App相关工具操作类，支持功能如下：<br>
 |int checkPackageStatus(Context context, String packageName, int versionCode)|判断APP在手机的安装状态（未安装、已安装、更新等）|
 |boolean openApp(Context context, String packageName)|启动第三方APP|
 
-#### 10、 NetworkUtil
+### 10、 NetworkUtil
 网络工具操作类NetworkUtil，目前支持功能如下：<br>
 1、获取网络IP地址<br>
 2、判断网络是否可用<br>
@@ -159,7 +159,7 @@ App相关工具操作类，支持功能如下：<br>
 |boolean isNetworkAvailable(Context context)|判断当前网络是否可用|
 |boolean isWifiConnected(Context context)|判断当前网络是否连接WiFi|
 
-#### 11、DeviceUtil
+### 11、DeviceUtil
 设备操作工具类DeviceUtil，目前支持功能如下：<br>
 1、获取设备屏幕宽度和高度大小<br>
 2、获取设备IMEI号<br>
@@ -175,7 +175,7 @@ App相关工具操作类，支持功能如下：<br>
 |String getImsi(Context context)|获取SIM卡IMSI序列号|
 |String getMacAddress(Context context)|获取设备Mac地址|
 
-#### 12、SystemUtil
+### 12、SystemUtil
 System操作工具类SystemUtil,目前支持功能如下：<br>
 1、判断SD卡是否可用<br>
 2、获取SD卡路径<br>
@@ -192,7 +192,7 @@ System操作工具类SystemUtil,目前支持功能如下：<br>
 |String getSysVersion()|获取系统版本号|
 |int getSDKVersion()|获取系统SDK版本号|
 
-#### 13、RunnableUtil
+### 13、RunnableUtil
 Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行效率，支持如下功能：<br>
 1、支持Runnable任务task立即以及排队执行<br>
 **支持具体功能方法使用说明如下：**<br>
@@ -202,7 +202,7 @@ Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行
 |void runTask(Runnable task)|执行Runnable任务，默认为任务排队执行|
 |runTask(Runnable task, boolean immediate)|执行Runnable任务，immediate值表明任务是否立即执行，true：任务立即执行，false：任务排队执行（默认值）|
 
-#### 14、ViewUtil
+### 14、ViewUtil
 View操作相关工具类ViewUtil，目前支持功能如下：<br>
 1、判断两次点击之间是否存在快速点击（支持重置）<br>
 **支持具体功能方法使用说明如下：**<br>
@@ -214,5 +214,5 @@ View操作相关工具类ViewUtil，目前支持功能如下：<br>
 |boolean isFastDoubleClick(boolean isReset)|判断两次点击之间是否存在快速点击,默认两次点击时间间隔阈值为800ms,isReset 需要是要重置（由于记录上次点击时间是采用static的形式，防止在两个不同控件之间快速点击存在误判）|
 |boolean isFastDoubleClick(long interval, boolean isReset)|判断两次点击之间是否存在快速点击,isReset值含义如上|
 
-#### 持续更新中
+### 持续更新中
 
