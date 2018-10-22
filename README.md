@@ -15,7 +15,7 @@ Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与
 |List\<T\> parseJson(String json, Type listType)| Json字符串转换为参数为泛型对象T的List列表|
   
 当将Json字符串转化为List列表时，需要获取List列表具体的Type对象(TypeToken)，可以通过如下方式获取：<br>
-new TypeToken<List<T>>(){}.getType()<br>
+**new TypeToken<List<T>>(){}.getType()**<br>
 其中T为泛型对象，在实际使用时替换为具体的实体类即可
 #### 2、TextUtil:
 Text文本操作工具类TextUtil，目前支持功能如下--持续更新中：<br>
