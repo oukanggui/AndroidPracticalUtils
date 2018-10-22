@@ -9,7 +9,7 @@ Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|---|---|
+|:---|:---|
 |String toJson(Object object)|将对象转化后的Json字符串|
 |T parseJson(String json, Class\<T\> tClass)| Json字符串转换为泛型对象T|
 |List\<T\> parseJson(String json, Type listType)| Json字符串转换为参数为泛型对象T的List列表|
@@ -26,7 +26,7 @@ Text文本操作工具类TextUtil，目前支持功能如下：<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |boolean isEmpty(String str)|判断字符串是否为空|
 |boolean isBlank(final CharSequence s)|判断字符串是否全为空格|
 |boolean isEmail(String strEmail)|判断一个字符串是否是邮箱格式，目前只是简单的通过字符串中是否含有@来判断|
@@ -40,7 +40,7 @@ SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |void saveInt(Context context, String key, int value)|保存int整型数值|
 |void saveFloat(Context context, String key, float value)|保存Float浮点型数值|
 |void saveBoolean(Context context, String key, boolean value)|保存Boolean数值|
@@ -63,7 +63,7 @@ Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |void showToast(final Context context, final CharSequence text, final int duration)|显示Toast|
 |void showToast(Context context, CharSequence text)|显示Toast，默认显示时长duration为Toast.LENGTH_SHORT|
 |void cancelToast()|取消Toast的显示|
@@ -81,7 +81,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |void i(String tag, String msg)|打印Info level log|
 |void d(String tag, String msg)|打印Debug level log|
 |void v(String tag, String msg)|打印Verbose level log|
@@ -96,7 +96,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |String getSystemCurrentTime()|获取当前系统时间（格式为yyyy-MM-dd HH:mm:ss的字符串）|
 |boolean isSameDay(String lastTime, String currentTime)|判断两个日期是否为同一天（yyyy-MM-dd HH:mm:ss格式的日期）|
 |long twoDateGapSeconds(String startTime, String endTime)|计算两个日期的时间相差多少秒|
@@ -111,7 +111,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |void showSoftInput(Context context, View view)|显示系统软键盘，其中View为接收输入内容的View|
 |void hideSoftInput(Context context, View view)|隐藏系统软键盘，其中View为接收输入内容的View|
 |void hideSoftInput(Activity activity)|隐藏系统软键盘|
@@ -122,7 +122,7 @@ Dimen尺寸操作工具类DimenUtil，支持功能如下：<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |int dp2px(Context context, int dipValue)|转换dp为px|
 |int px2dp(Context context, int pxValue)|转换px为dp|
 |int sp2px(Context context, float spValue)|转换sp为px|
@@ -137,7 +137,7 @@ App相关工具操作类，支持功能如下：<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |String getAppVersionName(Context context)|获取应用本身的版本名|
 |String getAppVersionName(Context context, String packageName)|获取第三方应用的版本名|
 |int getAppVersionCode(Context context)|获取应用本身的版本号|
@@ -154,7 +154,7 @@ App相关工具操作类，支持功能如下：<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |String getIp()|获取网络IP地址|
 |boolean isNetworkAvailable(Context context)|判断当前网络是否可用|
 |boolean isWifiConnected(Context context)|判断当前网络是否连接WiFi|
@@ -168,7 +168,7 @@ App相关工具操作类，支持功能如下：<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |int getScreenWidth(Context context)|获取设备屏幕宽度（px）|
 |int getScreenHeight(Context context)|获取屏幕的高度（px）|
 |String getImei(Context context)|获取设备IMEI号|
@@ -185,7 +185,7 @@ System操作工具类SystemUtil,目前支持功能如下：<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |boolean isSDCardAvailable()|判断SD卡是否可用|
 |String getSDCardPath()|获取SDCard路径|
 |String getSysModel()|获取系统型号|
@@ -198,7 +198,7 @@ Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |void runTask(Runnable task)|执行Runnable任务，默认为任务排队执行|
 |runTask(Runnable task, boolean immediate)|执行Runnable任务，immediate值表明任务是否立即执行，true：任务立即执行，false：任务排队执行（默认值）|
 
@@ -208,7 +208,7 @@ View操作相关工具类ViewUtil，目前支持功能如下：<br>
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|:---|:---|
 |boolean isFastDoubleClick()|判断两次点击之间是否存在快速点击,默认两次点击时间间隔阈值为800ms|
 |boolean isFastDoubleClick(long interval)|判断两次点击之间是否存在快速点击，interval为两次点击时间间隔阈值|
 |boolean isFastDoubleClick(boolean isReset)|判断两次点击之间是否存在快速点击,默认两次点击时间间隔阈值为800ms,isReset 需要是要重置（由于记录上次点击时间是采用static的形式，防止在两个不同控件之间快速点击存在误判）|
