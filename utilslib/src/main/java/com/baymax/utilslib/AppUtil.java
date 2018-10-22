@@ -111,7 +111,7 @@ public class AppUtil {
     }
 
     /**
-     * 检测该包名所对应的应用是否存在,判断是否已安装
+     * 检测该包名所对应的应用是否已安装
      *
      * @param context
      * @param packageName 当判断应用的包名

@@ -155,7 +155,7 @@ public class SharedPreferencesUtil {
     }
 
     /**
-     * 获取相应key的String数值
+     * 获取相应key的Set<String>数值
      *
      * @param context      上下文
      * @param key          保存值的键key
@@ -178,7 +178,7 @@ public class SharedPreferencesUtil {
     }
 
     /**
-     * 移除key对应的内容内容
+     * 移除key对应的内容
      *
      * @param context 上下文
      * @param key     待remove key
