@@ -9,7 +9,7 @@ Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
-|:---:|:---:|
+|---|---|
 |String toJson(Object object)|将对象转化后的Json字符串|
 |T parseJson(String json, Class\<T\> tClass)| Json字符串转换为泛型对象T|
 |List\<T\> parseJson(String json, Type listType)| Json字符串转换为参数为泛型对象T的List列表|
