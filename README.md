@@ -6,13 +6,13 @@
 Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与Json数据的转换，支持功能如下：<br>
 1、将任意对象或列表转为Json字符串<br>
 2、将Json字符串转换为任意对象或列表(通过泛型)<br>
-支持具体功能方法使用说明如下：<br>
+**支持具体功能方法使用说明如下：<br>
 
 |方法名|功能说明|
 |:---:|----|
 |String toJson(Object object)|将对象转化后的Json字符串|
 |T parseJson(String json, Class<T> tClass)| Json字符串转换为泛型对象T|
-|List<T> parseJson(String json, Type listType)| Json字符串转换为参数为泛型对象T的List列表|
+|List\<T\> parseJson(String json, Type listType)| Json字符串转换为参数为泛型对象T的List列表|
   
 当将Json字符串转化为List列表时，需要获取List列表具体的Type对象(TypeToken)，可以通过如下方式获取：<br>
 new TypeToken<List<T>>(){}.getType()<br>
