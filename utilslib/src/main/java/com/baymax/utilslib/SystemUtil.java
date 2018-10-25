@@ -39,7 +39,7 @@ public class SystemUtil {
      *
      * @return
      */
-    public static String getSysModel() {
+    public static String getSystemModel() {
         return Build.MODEL;
     }
 
@@ -48,7 +48,7 @@ public class SystemUtil {
      *
      * @return
      */
-    public static String getSysVersion() {
+    public static String getSystemVersion() {
         return Build.VERSION.RELEASE;
     }
 

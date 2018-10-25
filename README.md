@@ -190,8 +190,8 @@ System操作工具类SystemUtil,目前支持功能如下：<br>
 |:---|:---|
 |boolean isSDCardAvailable()|判断SD卡是否可用|
 |String getSDCardPath()|获取SDCard路径|
-|String getSysModel()|获取系统型号|
-|String getSysVersion()|获取系统版本号|
+|String getSystemModel()|获取系统型号|
+|String getSystemVersion()|获取系统版本号|
 |int getSDKVersion()|获取系统SDK版本号|
 |void openSystemBrowser(Context context,String url)|调用系统浏览器打开网页|
 |void openSystemShareChooser(Context context, String title, String text)|打开系统分享选择器|
