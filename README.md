@@ -182,6 +182,8 @@ System操作工具类SystemUtil,目前支持功能如下：<br>
 3、获取系统型号<br>
 4、获取系统版本号<br>
 5、获取系统SDK版本号信息<br>
+6、支持调用系统浏览器打开网页
+7、支持打开系统分享选择器
 **支持具体功能方法使用说明如下：**<br>
 
 |方法名|功能说明|
@@ -191,6 +193,8 @@ System操作工具类SystemUtil,目前支持功能如下：<br>
 |String getSysModel()|获取系统型号|
 |String getSysVersion()|获取系统版本号|
 |int getSDKVersion()|获取系统SDK版本号|
+|void openSystemBrowser(Context context,String url)|调用系统浏览器打开网页|
+|void openSystemShareChooser(Context context, String title, String text)|打开系统分享选择器|
 
 ### 13、RunnableUtil
 Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行效率，支持如下功能：<br>
