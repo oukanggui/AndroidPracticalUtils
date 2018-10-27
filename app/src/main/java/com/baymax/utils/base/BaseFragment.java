@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.baymax.utils.R;
 import com.baymax.utilslib.LogUtil;
 
 import butterknife.ButterKnife;
@@ -29,7 +30,7 @@ public abstract class BaseFragment extends Fragment {
     /**
      * 缓存Fragment view
      */
-    private View rootView;
+    protected View rootView;
 
     @Override
     public void onAttach(Context context) {
@@ -84,4 +85,19 @@ public abstract class BaseFragment extends Fragment {
      * 子类页面Activity重写该方法返回页面布局layoutid
      */
     protected abstract int getLayoutResId();
+
+    /**
+     * 子类页面Activity重写该方法返回页面布局RootView
+     */
+    protected void createRootViewAndBuild(LayoutInflater inflater, @Nullable ViewGroup container, int layoutResId) {
+        rootView = inflater.inflate(layoutResId, container, false);
+        ButterKnife.bind(rootView);
+    }
+
+    /**
+     * 页面跟布局layoutid，默认为页面布局layoutid，如果需要重设，重写此方式即可
+     */
+    protected int getRootViewLayoutResId() {
+        return getLayoutResId();
+    }
 }

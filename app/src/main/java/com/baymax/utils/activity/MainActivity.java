@@ -1,6 +1,7 @@
 package com.baymax.utils.activity;
 
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,7 +9,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.baymax.utils.R;
+import com.baymax.utils.base.BaseContentFragment;
 import com.baymax.utils.base.BaseTitleBarActivity;
+import com.baymax.utils.fragment.NetworkUtilFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +34,6 @@ public class MainActivity extends BaseTitleBarActivity {
     protected void initView() {
         showBackView(false);
         setTitle("Android实用工具集");
-        initData();
     }
 
     @Override
@@ -43,12 +45,12 @@ public class MainActivity extends BaseTitleBarActivity {
 
     private void initTitles() {
         mTitles.clear();
+        mTitles.add("NetworkUtil");
         mTitles.add("AppUtil");
         mTitles.add("DeviceUtil");
         mTitles.add("DimenUtil");
         mTitles.add("JsonUtil");
         mTitles.add("LogUtil");
-        mTitles.add("NetworkUtil");
         mTitles.add("RunnableUtil");
         mTitles.add("SharedPreferencesUtil");
         mTitles.add("SoftInputUtil");
@@ -61,31 +63,104 @@ public class MainActivity extends BaseTitleBarActivity {
 
     private void initFragments() {
         mFragments.clear();
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
-        mFragments.add(new Fragment());
+        Fragment networkFragment = new NetworkUtilFragment();
+        setIntroduction(networkFragment, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment1 = new NetworkUtilFragment();
+        setIntroduction(networkFragment1, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment2 = new NetworkUtilFragment();
+        setIntroduction(networkFragment2, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment3 = new NetworkUtilFragment();
+        setIntroduction(networkFragment3, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment4 = new NetworkUtilFragment();
+        setIntroduction(networkFragment4, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment5 = new NetworkUtilFragment();
+        setIntroduction(networkFragment5, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment6 = new NetworkUtilFragment();
+        setIntroduction(networkFragment6, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment7 = new NetworkUtilFragment();
+        setIntroduction(networkFragment7, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment8 = new NetworkUtilFragment();
+        setIntroduction(networkFragment8, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment9 = new NetworkUtilFragment();
+        setIntroduction(networkFragment9, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment10 = new NetworkUtilFragment();
+        setIntroduction(networkFragment10, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment11 = new NetworkUtilFragment();
+        setIntroduction(networkFragment11, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        Fragment networkFragment12 = new NetworkUtilFragment();
+        setIntroduction(networkFragment12, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
+                "1、获取网络IP地址\n" +
+                "2、判断网络是否可用\n" +
+                "3、判断当前网络是否连接WiFi");
+        mFragments.add(networkFragment);
+        mFragments.add(networkFragment1);
+        mFragments.add(networkFragment2);
+        mFragments.add(networkFragment3);
+        mFragments.add(networkFragment4);
+        mFragments.add(networkFragment5);
+        mFragments.add(networkFragment6);
+        mFragments.add(networkFragment7);
+        mFragments.add(networkFragment8);
+        mFragments.add(networkFragment9);
+        mFragments.add(networkFragment10);
+        mFragments.add(networkFragment11);
+        mFragments.add(networkFragment12);
     }
 
     private void initViewPager() {
         mPagerAdapter = new CustomFragmentPagerAdapter(MainActivity.this.getSupportFragmentManager(), mFragments, mTitles);
         mViewPager.setAdapter(mPagerAdapter);
+        mViewPager.setOffscreenPageLimit(mFragments.size()); //预加载
         mTablayout.setupWithViewPager(mViewPager);
     }
 
     @Override
     protected int getLayoutResId() {
         return R.layout.activity_main;
+    }
+
+    private void setIntroduction(Fragment fragment, String strIntroduction) {
+        if (fragment != null) {
+            Bundle bundle = new Bundle();
+            bundle.putString(BaseContentFragment.KEY_INTRODUCTION, strIntroduction);
+            fragment.setArguments(bundle);
+        }
     }
 
 
