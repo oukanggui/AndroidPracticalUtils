@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.baymax.utils.R;
 
+import butterknife.ButterKnife;
+
 
 /**
  * @author oukanggui
@@ -30,11 +32,12 @@ public abstract class BaseContentFragment extends BaseFragment {
 
     @Override
     protected void createRootViewAndBuild(LayoutInflater inflater, @Nullable ViewGroup container, int layoutResId) {
-        super.createRootViewAndBuild(inflater, container, layoutResId);
+        rootView = inflater.inflate(layoutResId, container, false);
         mContentView = rootView.findViewById(R.id.tv_introduction);
         mContainer = rootView.findViewById(R.id.fl_container);
         //获取子布局
         View contentView = LayoutInflater.from(mActivity).inflate(getLayoutResId(), null, false);
+        mBinder = ButterKnife.bind(contentView);
         mContainer.addView(contentView);
     }
 

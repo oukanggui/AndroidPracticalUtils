@@ -25,7 +25,7 @@ import butterknife.Unbinder;
 public abstract class BaseFragment extends Fragment {
 
     private static final String TAG = BaseFragment.class.getSimpleName();
-    Unbinder mBinder;
+    protected Unbinder mBinder;
     public Activity mActivity;
     /**
      * 缓存Fragment view
@@ -49,7 +49,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         LogUtil.i(TAG, "onCreateView");
         if (rootView == null) {
-            rootView = inflater.inflate(getLayoutResId(), container, false);
+            createRootViewAndBuild(inflater, container, getRootViewLayoutResId());
             ButterKnife.bind(rootView);
             initView(rootView);
             initData();
@@ -91,7 +91,7 @@ public abstract class BaseFragment extends Fragment {
      */
     protected void createRootViewAndBuild(LayoutInflater inflater, @Nullable ViewGroup container, int layoutResId) {
         rootView = inflater.inflate(layoutResId, container, false);
-        ButterKnife.bind(rootView);
+        mBinder = ButterKnife.bind(rootView);
     }
 
     /**

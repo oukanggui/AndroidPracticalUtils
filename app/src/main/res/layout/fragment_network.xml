@@ -7,22 +7,28 @@
 
     <Button
         android:id="@+id/bt_get_ip"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
         android:text="获取网络IP" />
 
     <Button
         android:id="@+id/bt_network_avaliable"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
         android:text="当前网络是否可用" />
 
     <Button
         android:id="@+id/bt_check_wifi"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
         android:text="当前网络是否连接WiFi" />
 </LinearLayout>
