@@ -49,8 +49,8 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         LogUtil.i(TAG, "onCreateView");
         if (rootView == null) {
-            createRootViewAndBuild(inflater, container, getRootViewLayoutResId());
-            ButterKnife.bind(rootView);
+            rootView = createRootView(inflater, container, getRootViewLayoutResId());
+            mBinder = ButterKnife.bind(this, rootView);
             initView(rootView);
             initData();
         } else {
@@ -89,9 +89,8 @@ public abstract class BaseFragment extends Fragment {
     /**
      * 子类页面Activity重写该方法返回页面布局RootView
      */
-    protected void createRootViewAndBuild(LayoutInflater inflater, @Nullable ViewGroup container, int layoutResId) {
-        rootView = inflater.inflate(layoutResId, container, false);
-        mBinder = ButterKnife.bind(rootView);
+    protected View createRootView(LayoutInflater inflater, @Nullable ViewGroup container, int layoutResId) {
+        return inflater.inflate(layoutResId, container, false);
     }
 
     /**
