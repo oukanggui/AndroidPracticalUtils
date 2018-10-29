@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/bt_check_sdcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="判断SD卡是否可用" />
+
+        <Button
+            android:id="@+id/bt_get_sd_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="获取SD卡路径" />
+
+        <Button
+            android:id="@+id/bt_get_sys_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="获取手机系统型号" />
+
+        <Button
+            android:id="@+id/bt_get_sys_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="获取手机系统版本号" />
+
+        <Button
+            android:id="@+id/bt_get_sys_sdk_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="获取手机系统SDK版本" />
+
+        <Button
+            android:id="@+id/bt_open_sys_broswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="打开系统浏览器（eg.打开百度）" />
+
+        <EditText
+            android:id="@+id/et_share_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:hint="输入分享标题" />
+
+        <EditText
+            android:id="@+id/et_share_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:hint="输入分享内容" />
+
+        <Button
+            android:id="@+id/bt_open_share_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="打开系统分享选择器"
+            android:layout_marginBottom="50dp" />
+    </LinearLayout>
+</ScrollView>

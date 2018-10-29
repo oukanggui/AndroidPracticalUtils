@@ -24,4 +24,13 @@
                 \n1、软键盘显示（支持绑定view监听输入）
                 \n2、软键盘隐藏（收起）
     </string>
+    <string name="introduction_systemutil">System操作工具类SystemUtil,目前支持功能如下：
+                \n1、判断SD卡是否可用
+                \n2、获取SD卡路径
+                \n3、获取系统型号
+                \n4、获取系统版本号
+                \n5、获取系统SDK版本号信息
+                \n6、支持调用系统浏览器打开网页
+                \n7、支持打开系统分享选择器
+    </string>
 </resources>

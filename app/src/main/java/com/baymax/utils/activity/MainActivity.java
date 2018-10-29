@@ -16,6 +16,7 @@ import com.baymax.utils.fragment.DeviceUtilFragment;
 import com.baymax.utils.fragment.DimenUtilFragment;
 import com.baymax.utils.fragment.NetworkUtilFragment;
 import com.baymax.utils.fragment.SoftInputUtilFragment;
+import com.baymax.utils.fragment.SystemUtilFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,11 +83,9 @@ public class MainActivity extends BaseTitleBarActivity {
         Fragment softinputUtilFragment = new SoftInputUtilFragment();
         setIntroduction(softinputUtilFragment, getString(R.string.introduction_softinpututil));
 
-        Fragment networkFragment5 = new NetworkUtilFragment();
-        setIntroduction(networkFragment5, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
-                "1、获取网络IP地址\n" +
-                "2、判断网络是否可用\n" +
-                "3、判断当前网络是否连接WiFi");
+        Fragment systemUtilFragment = new SystemUtilFragment();
+        setIntroduction(systemUtilFragment, getString(R.string.introduction_systemutil));
+
         Fragment networkFragment6 = new NetworkUtilFragment();
         setIntroduction(networkFragment6, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
                 "1、获取网络IP地址\n" +
@@ -127,7 +126,7 @@ public class MainActivity extends BaseTitleBarActivity {
         mFragments.add(deviceUtilFragment);
         mFragments.add(dimenUtilFragment);
         mFragments.add(softinputUtilFragment);
-        mFragments.add(networkFragment5);
+        mFragments.add(systemUtilFragment);
         mFragments.add(networkFragment6);
         mFragments.add(networkFragment7);
         mFragments.add(networkFragment8);
