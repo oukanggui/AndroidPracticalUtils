@@ -11,6 +11,7 @@ import android.support.v4.view.ViewPager;
 import com.baymax.utils.R;
 import com.baymax.utils.base.BaseContentFragment;
 import com.baymax.utils.base.BaseTitleBarActivity;
+import com.baymax.utils.fragment.AppUtilFragment;
 import com.baymax.utils.fragment.NetworkUtilFragment;
 
 import java.util.ArrayList;
@@ -63,14 +64,12 @@ public class MainActivity extends BaseTitleBarActivity {
 
     private void initFragments() {
         mFragments.clear();
-        Fragment networkFragment = new NetworkUtilFragment();
-        setIntroduction(networkFragment, getResources().getString(R.string.introduction_networkutil));
+        Fragment networkUtilFragment = new NetworkUtilFragment();
+        setIntroduction(networkUtilFragment, getResources().getString(R.string.introduction_networkutil));
 
-        Fragment networkFragment1 = new NetworkUtilFragment();
-        setIntroduction(networkFragment1, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
-                "1、获取网络IP地址\n" +
-                "2、判断网络是否可用\n" +
-                "3、判断当前网络是否连接WiFi");
+        Fragment appUtilFragment = new AppUtilFragment();
+        setIntroduction(appUtilFragment, getResources().getString(R.string.introduction_apputil));
+
         Fragment networkFragment2 = new NetworkUtilFragment();
         setIntroduction(networkFragment2, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
                 "1、获取网络IP地址\n" +
@@ -126,8 +125,8 @@ public class MainActivity extends BaseTitleBarActivity {
                 "1、获取网络IP地址\n" +
                 "2、判断网络是否可用\n" +
                 "3、判断当前网络是否连接WiFi");
-        mFragments.add(networkFragment);
-        mFragments.add(networkFragment1);
+        mFragments.add(networkUtilFragment);
+        mFragments.add(appUtilFragment);
         mFragments.add(networkFragment2);
         mFragments.add(networkFragment3);
         mFragments.add(networkFragment4);

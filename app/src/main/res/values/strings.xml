@@ -4,4 +4,9 @@
                 \n1、获取网络IP地址
                 \n2、判断网络是否可用
                 \n3、判断当前网络是否连接WiFi</string>
+    <string name="introduction_apputil">App相关工具操作类，目前支持功能如下:
+                \n1、获取自身以及第三方应用版本名称以及版本号
+                \n2、检测某应用是否已安装
+                \n3、获取某应用在手机的状态（更新、已安装、未安装等）
+                \n4、启动（打开）第三方APP</string>
 </resources>

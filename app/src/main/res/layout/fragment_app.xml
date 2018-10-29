@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <Button
+        android:id="@+id/bt_get_versioninfo_shelf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="获取应用本身版本名称和版本号" />
+
+    <Button
+        android:id="@+id/bt_get_versioninfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:text="获取第三方应用(eg.微信)版本名称和版本号" />
+
+    <Button
+        android:id="@+id/bt_get_install_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:text="获取第三方应用(eg.微信)的安装状态" />
+
+    <Button
+        android:id="@+id/bt_open_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:text="打开(启动)第三方应用(eg.微信)" />
+</LinearLayout>

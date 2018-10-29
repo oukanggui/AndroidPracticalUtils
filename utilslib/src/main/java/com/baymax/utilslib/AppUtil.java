@@ -117,7 +117,7 @@ public class AppUtil {
      * @param packageName 当判断应用的包名
      * @return
      */
-    public static boolean checkPackage(Context context, String packageName) {
+    public static boolean checkPackageInstalled(Context context, String packageName) {
         if (packageName == null || "".equals(packageName)) {
             return false;
         }
@@ -162,7 +162,7 @@ public class AppUtil {
                 }
             }
         }
-        ToastUtil.showToast(context, "该应用不支持直接打开");
+        ToastUtil.showToast(context, "应用没有安装或不支持直接打开");
         return false;
     }
 

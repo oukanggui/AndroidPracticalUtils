@@ -142,7 +142,7 @@ App相关工具操作类，支持功能如下：<br>
 |String getAppVersionName(Context context, String packageName)|获取第三方应用的版本名|
 |int getAppVersionCode(Context context)|获取应用本身的版本号|
 |int getAppVersionCode(Context context, String packageName)|获取第三方应用的版本号|
-|boolean checkPackage(Context context, String packageName)|检测该包名所对应的应用是否已安装|
+|boolean checkPackageInstalled(Context context, String packageName)|检测该包名所对应的应用是否已安装|
 |int checkPackageStatus(Context context, String packageName, int versionCode)|判断APP在手机的安装状态（未安装、已安装、更新等）|
 |boolean openApp(Context context, String packageName)|启动第三方APP|
 

@@ -11,7 +11,7 @@ import butterknife.OnClick;
 /**
  * @author oukanggui
  * @date 2018/10/27
- * 描述：
+ * 描述：NetworkUtil使用演示Fragment
  */
 
 public class NetworkUtilFragment extends BaseContentFragment {
