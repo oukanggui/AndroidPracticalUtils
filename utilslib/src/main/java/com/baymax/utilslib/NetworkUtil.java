@@ -19,7 +19,8 @@ import java.util.Enumeration;
 public class NetworkUtil {
 
     /**
-     * 获取网络IP  eg：192.168.191.88
+     * 获取网络IP  eg：192.168.191.88 需要权限：android.permission.INTERNET
+     * 需要访问网网权限，否则返回IP地址为空
      *
      * @return 网络IP，没有的话返回""
      */
@@ -27,9 +28,15 @@ public class NetworkUtil {
         String ip = null;
         try {
             Enumeration enumeration = NetworkInterface.getNetworkInterfaces();
+            if (enumeration == null) {
+                return "";
+            }
             while (enumeration.hasMoreElements()) {
                 NetworkInterface networkInterface = (NetworkInterface) enumeration.nextElement();
                 Enumeration enumr = networkInterface.getInetAddresses();
+                if (enumr == null) {
+                    return "";
+                }
                 while (enumr.hasMoreElements()) {
                     InetAddress inetAddress = (InetAddress) enumr.nextElement();
                     if (!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet4Address) {

@@ -64,10 +64,8 @@ public class MainActivity extends BaseTitleBarActivity {
     private void initFragments() {
         mFragments.clear();
         Fragment networkFragment = new NetworkUtilFragment();
-        setIntroduction(networkFragment, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
-                "1、获取网络IP地址\n" +
-                "2、判断网络是否可用\n" +
-                "3、判断当前网络是否连接WiFi");
+        setIntroduction(networkFragment, getResources().getString(R.string.introduction_networkutil));
+
         Fragment networkFragment1 = new NetworkUtilFragment();
         setIntroduction(networkFragment1, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
                 "1、获取网络IP地址\n" +
@@ -146,7 +144,8 @@ public class MainActivity extends BaseTitleBarActivity {
     private void initViewPager() {
         mPagerAdapter = new CustomFragmentPagerAdapter(MainActivity.this.getSupportFragmentManager(), mFragments, mTitles);
         mViewPager.setAdapter(mPagerAdapter);
-        mViewPager.setOffscreenPageLimit(mFragments.size()); //预加载
+        //预加载
+        mViewPager.setOffscreenPageLimit(mFragments.size());
         mTablayout.setupWithViewPager(mViewPager);
     }
 

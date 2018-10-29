@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidPracticalUtils</string>
+    <string name="introduction_networkutil">网络工具操作类NetworkUtil，目前支持功能如下：
+                \n1、获取网络IP地址
+                \n2、判断网络是否可用
+                \n3、判断当前网络是否连接WiFi</string>
 </resources>
