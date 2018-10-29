@@ -20,4 +20,8 @@
     <string name="introduction_dimenutil">Dimen尺寸操作工具类DimenUtil，支持功能如下：
                 \n支持sp与px、dp与px之间的互相换算
     </string>
+    <string name="introduction_softinpututil">软键盘操作工具类SoftInputUtil，支持功能如下:
+                \n1、软键盘显示（支持绑定view监听输入）
+                \n2、软键盘隐藏（收起）
+    </string>
 </resources>

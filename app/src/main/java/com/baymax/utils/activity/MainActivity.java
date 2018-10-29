@@ -15,6 +15,7 @@ import com.baymax.utils.fragment.AppUtilFragment;
 import com.baymax.utils.fragment.DeviceUtilFragment;
 import com.baymax.utils.fragment.DimenUtilFragment;
 import com.baymax.utils.fragment.NetworkUtilFragment;
+import com.baymax.utils.fragment.SoftInputUtilFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,16 +53,16 @@ public class MainActivity extends BaseTitleBarActivity {
         mTitles.add("AppUtil");
         mTitles.add("DeviceUtil");
         mTitles.add("DimenUtil");
+        mTitles.add("SoftInputUtil");
+        mTitles.add("SystemUtil");
         mTitles.add("JsonUtil");
+        mTitles.add("TextUtil");
+        mTitles.add("TimeUtil");
+        mTitles.add("ViewUtil");
         mTitles.add("LogUtil");
         mTitles.add("RunnableUtil");
         mTitles.add("SharedPreferencesUtil");
-        mTitles.add("SoftInputUtil");
-        mTitles.add("SystemUtil");
-        mTitles.add("TextUtil");
-        mTitles.add("TimeUtil");
         mTitles.add("ToastUtil");
-        mTitles.add("ViewUtil");
     }
 
     private void initFragments() {
@@ -78,11 +79,9 @@ public class MainActivity extends BaseTitleBarActivity {
         Fragment dimenUtilFragment = new DimenUtilFragment();
         setIntroduction(dimenUtilFragment, getString(R.string.introduction_dimenutil));
 
-        Fragment networkFragment4 = new NetworkUtilFragment();
-        setIntroduction(networkFragment4, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
-                "1、获取网络IP地址\n" +
-                "2、判断网络是否可用\n" +
-                "3、判断当前网络是否连接WiFi");
+        Fragment softinputUtilFragment = new SoftInputUtilFragment();
+        setIntroduction(softinputUtilFragment, getString(R.string.introduction_softinpututil));
+
         Fragment networkFragment5 = new NetworkUtilFragment();
         setIntroduction(networkFragment5, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
                 "1、获取网络IP地址\n" +
@@ -127,7 +126,7 @@ public class MainActivity extends BaseTitleBarActivity {
         mFragments.add(appUtilFragment);
         mFragments.add(deviceUtilFragment);
         mFragments.add(dimenUtilFragment);
-        mFragments.add(networkFragment4);
+        mFragments.add(softinputUtilFragment);
         mFragments.add(networkFragment5);
         mFragments.add(networkFragment6);
         mFragments.add(networkFragment7);

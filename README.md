@@ -106,7 +106,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 
 ### 7、SoftInputUtil
 软键盘操作工具类SoftInputUtil，支持功能如下：<br>
-1、软键盘显示<br>
+1、软键盘显示（支持绑定view监听输入）<br>
 2、软键盘隐藏（收起）<br>
 **支持具体功能方法使用说明如下：**<br>
 
