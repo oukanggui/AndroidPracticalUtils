@@ -17,4 +17,7 @@
                 \n3、获取SIM卡IMSI号
                 \n4、获取设备MAC地址
     </string>
+    <string name="introduction_dimenutil">Dimen尺寸操作工具类DimenUtil，支持功能如下：
+                \n支持sp与px、dp与px之间的互相换算
+    </string>
 </resources>

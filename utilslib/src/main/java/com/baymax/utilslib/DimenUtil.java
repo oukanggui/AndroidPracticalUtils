@@ -17,7 +17,7 @@ public class DimenUtil {
      * @param dipValue
      * @return px
      */
-    public static int dp2px(Context context, int dipValue) {
+    public static int dp2px(Context context, float dipValue) {
         float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f * (dipValue >= 0 ? 1 : -1));
     }
@@ -29,7 +29,7 @@ public class DimenUtil {
      * @param pxValue
      * @return dp
      */
-    public static int px2dp(Context context, int pxValue) {
+    public static int px2dp(Context context, float pxValue) {
         float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f * (pxValue >= 0 ? 1 : -1));
     }
