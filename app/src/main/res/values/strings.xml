@@ -33,4 +33,8 @@
                 \n6、支持调用系统浏览器打开网页
                 \n7、支持打开系统分享选择器
     </string>
+    <string name="introduction_jsonutil">Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与Json数据的转换，支持功能如下：
+                \n1、将任意对象或列表转为Json字符串
+                \n2、将Json字符串转换为任意对象或列表(通过泛型)
+    </string>
 </resources>

@@ -22,7 +22,7 @@ public class JsonUtil {
      * @param object 待转换对象
      * @return 对象转化后的Json字符串
      */
-    private static String toJson(Object object) {
+    public static String toJson(Object object) {
         if (sGson == null) {
             sGson = new Gson();
         }
@@ -36,7 +36,7 @@ public class JsonUtil {
      * @param tClass 转换结果对象的Class
      * @return 返回转换后的对象
      */
-    private static <T> T parseJson(String json, Class<T> tClass) {
+    public static <T> T parseJson(String json, Class<T> tClass) {
         if (sGson == null) {
             sGson = new Gson();
         }
@@ -55,7 +55,7 @@ public class JsonUtil {
      * @param listType 转换结果List的Type
      * @return 返回转换后的List列表对象
      */
-    private static <T> List<T> parseJson(String json, Type listType) {
+    public static <T> List<T> parseJson(String json, Type listType) {
         if (listType == null) {
             return null;
         }
