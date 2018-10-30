@@ -18,6 +18,7 @@ import com.baymax.utils.fragment.JsonUtilFragment;
 import com.baymax.utils.fragment.NetworkUtilFragment;
 import com.baymax.utils.fragment.SoftInputUtilFragment;
 import com.baymax.utils.fragment.SystemUtilFragment;
+import com.baymax.utils.fragment.TextUtilFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,11 +91,9 @@ public class MainActivity extends BaseTitleBarActivity {
         Fragment jsonUtilFragment = new JsonUtilFragment();
         setIntroduction(jsonUtilFragment, getString(R.string.introduction_jsonutil));
 
-        Fragment networkFragment7 = new NetworkUtilFragment();
-        setIntroduction(networkFragment7, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
-                "1、获取网络IP地址\n" +
-                "2、判断网络是否可用\n" +
-                "3、判断当前网络是否连接WiFi");
+        Fragment textUtilFragment = new TextUtilFragment();
+        setIntroduction(textUtilFragment, getString(R.string.introduction_textutil));
+
         Fragment networkFragment8 = new NetworkUtilFragment();
         setIntroduction(networkFragment8, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
                 "1、获取网络IP地址\n" +
@@ -127,7 +126,7 @@ public class MainActivity extends BaseTitleBarActivity {
         mFragments.add(softinputUtilFragment);
         mFragments.add(systemUtilFragment);
         mFragments.add(jsonUtilFragment);
-        mFragments.add(networkFragment7);
+        mFragments.add(textUtilFragment);
         mFragments.add(networkFragment8);
         mFragments.add(networkFragment9);
         mFragments.add(networkFragment10);

@@ -37,4 +37,10 @@
                 \n1、将任意对象或列表转为Json字符串
                 \n2、将Json字符串转换为任意对象或列表(通过泛型)
     </string>
+    <string name="introduction_textutil">Text文本操作工具类TextUtil，目前支持功能如下：
+                \n1、字符串是否为空判断
+                \n2、字符串是否全为空格判断
+                \n3、邮箱格式判断
+                \n4、手机号码判断
+    </string>
 </resources>
