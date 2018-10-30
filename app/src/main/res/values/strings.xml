@@ -43,4 +43,9 @@
                 \n3、邮箱格式判断
                 \n4、手机号码判断
     </string>
+    <string name="introduction_timeutil">时间Time操作工具类TimeUtil，目前支持功能如下：
+                \n1、获取当前系统时间
+                \n2、判断两个日期是否为同一天
+                \n3、判断两个时间之间的相隔的秒数、分钟数、小时数以及天数
+    </string>
 </resources>
