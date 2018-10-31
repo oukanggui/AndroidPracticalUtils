@@ -58,4 +58,13 @@
                 \n1、Log打印到控制台
                 \n2、Log输出到文件保存进行持久化存储
     </string>
+    <string name="introduction_toastutil">Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点击Toast时的显示问题，目前支持功能如下：
+                \n1、Toast显示
+                \n2、Toast取消
+    </string>
+    <string name="introduction_sharedpreferencesutil">SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一致，目前支持功能如下：
+                \n1、save（put）与get：与原生保持一致，支持保存和获取int、float、long、boolean、String、类型为String的Set集合
+                \n2、clear：清空SharedPreferences内容
+                \n3、remove：支持删除remove相应key对应的值
+    </string>
 </resources>
