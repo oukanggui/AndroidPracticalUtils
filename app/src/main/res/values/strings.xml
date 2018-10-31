@@ -51,4 +51,7 @@
     <string name="introduction_viewutil">View操作相关工具类ViewUtil，目前支持功能如下：
                 \n1、判断两次点击之间是否存在快速点击（支持重置，防止不同view之间的误判）
     </string>
+    <string name="introduction_runnableutil">Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行效率，支持如下功能：
+                \n1、支持Runnable任务task立即以及排队执行
+    </string>
 </resources>

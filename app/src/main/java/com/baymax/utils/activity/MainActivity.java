@@ -16,6 +16,7 @@ import com.baymax.utils.fragment.DeviceUtilFragment;
 import com.baymax.utils.fragment.DimenUtilFragment;
 import com.baymax.utils.fragment.JsonUtilFragment;
 import com.baymax.utils.fragment.NetworkUtilFragment;
+import com.baymax.utils.fragment.RunnableUtilFragment;
 import com.baymax.utils.fragment.SoftInputUtilFragment;
 import com.baymax.utils.fragment.SystemUtilFragment;
 import com.baymax.utils.fragment.TextUtilFragment;
@@ -64,8 +65,8 @@ public class MainActivity extends BaseTitleBarActivity {
         mTitles.add("TextUtil");
         mTitles.add("TimeUtil");
         mTitles.add("ViewUtil");
-        mTitles.add("LogUtil");
         mTitles.add("RunnableUtil");
+        mTitles.add("LogUtil");
         mTitles.add("SharedPreferencesUtil");
         mTitles.add("ToastUtil");
     }
@@ -102,11 +103,9 @@ public class MainActivity extends BaseTitleBarActivity {
         Fragment viewUtilFragment = new ViewUtilFragment();
         setIntroduction(viewUtilFragment, getString(R.string.introduction_viewutil));
 
-        Fragment networkFragment10 = new NetworkUtilFragment();
-        setIntroduction(networkFragment10, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
-                "1、获取网络IP地址\n" +
-                "2、判断网络是否可用\n" +
-                "3、判断当前网络是否连接WiFi");
+        Fragment runnableUtilFragment = new RunnableUtilFragment();
+        setIntroduction(runnableUtilFragment, getString(R.string.introduction_runnableutil));
+
         Fragment networkFragment11 = new NetworkUtilFragment();
         setIntroduction(networkFragment11, "网络工具操作类NetworkUtil，目前支持功能如下：\n" +
                 "1、获取网络IP地址\n" +
@@ -127,7 +126,7 @@ public class MainActivity extends BaseTitleBarActivity {
         mFragments.add(textUtilFragment);
         mFragments.add(timeUtilFragment);
         mFragments.add(viewUtilFragment);
-        mFragments.add(networkFragment10);
+        mFragments.add(runnableUtilFragment);
         mFragments.add(networkFragment11);
         mFragments.add(networkFragment12);
     }

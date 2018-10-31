@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class RunnableUtil {
 
-    public static final int THREADPOOL_SIZE_QUEUE = 20;
+    private static final int THREADPOOL_SIZE_QUEUE = 20;
     private final static Object OBJECT_LOCK = new Object();
     private static ExecutorService mExecutorServiceQueue;
     private static ExecutorService mExecutorServiceImmediate;
@@ -29,7 +29,7 @@ public class RunnableUtil {
      *
      * @param task 任务Runnable
      */
-    public void runTask(Runnable task) {
+    public static void runTask(Runnable task) {
         runTask(task, false);
     }
 
@@ -39,7 +39,7 @@ public class RunnableUtil {
      * @param task      任务Runnable
      * @param immediate 是否立即执行，true：任务立即执行，false：任务排队执行（默认值）
      */
-    public void runTask(Runnable task, boolean immediate) {
+    public static void runTask(Runnable task, boolean immediate) {
         if (mExecutorServiceQueue == null) {
             synchronized (OBJECT_LOCK) {
                 if (mExecutorServiceQueue == null) {
