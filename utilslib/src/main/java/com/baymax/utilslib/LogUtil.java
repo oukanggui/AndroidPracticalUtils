@@ -72,7 +72,7 @@ public class LogUtil {
      * 初始化日志操作--应在Application中进行初始化
      *
      * @param context
-     * @param isShowLog 是否打印日志
+     * @param isShowLog     是否打印日志
      * @param isWriteToFile 是否把日志写到文件（需要读写文件的权限）
      */
     public static void init(Context context, boolean isShowLog, boolean isWriteToFile) {
@@ -183,15 +183,11 @@ public class LogUtil {
                             return;
                         }
                         File file = new File(LOG_PATH_SDCARD_DIR);
-                        boolean isCreateDirOk = false;
                         if (!file.isDirectory()) {
-                            isCreateDirOk = file.mkdirs();
+                            boolean isCreateDirOk = file.mkdirs();
                             if (!isCreateDirOk) {
-                                isCreateDirOk = file.mkdirs();
+                                return;
                             }
-                       }
-                        if (!isCreateDirOk) {
-                            return;
                         }
                         mLogFile = new File(LOG_PATH_SDCARD_DIR
                                 + File.separator + LOG_FILENAME + "(" + Process.myPid() + ")"
@@ -255,11 +251,15 @@ public class LogUtil {
     /**
      * 写文件是需要判断是够具有写文件权限，以免由于权限不足导致崩溃问题
      */
-    private static boolean isWritePermissionGranted(){
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M){
+    private static boolean isWritePermissionGranted() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
         }
         return mContext.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    public static File getCurrentLogFile() {
+        return mLogFile;
     }
 
     private static class WriteLogThread extends Thread {

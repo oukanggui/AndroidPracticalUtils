@@ -54,4 +54,8 @@
     <string name="introduction_runnableutil">Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行效率，支持如下功能：
                 \n1、支持Runnable任务task立即以及排队执行
     </string>
+    <string name="introduction_logutil">日志Log操作工具类，支持日记打印以及输出到文件中进行存储，便于Log记录与持久化存储：
+                \n1、Log打印到控制台
+                \n2、Log输出到文件保存进行持久化存储
+    </string>
 </resources>
