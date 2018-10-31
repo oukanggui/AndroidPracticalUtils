@@ -48,4 +48,7 @@
                 \n2、判断两个日期是否为同一天
                 \n3、判断两个时间之间的相隔的秒数、分钟数、小时数以及天数
     </string>
+    <string name="introduction_viewutil">View操作相关工具类ViewUtil，目前支持功能如下：
+                \n1、判断两次点击之间是否存在快速点击（支持重置，防止不同view之间的误判）
+    </string>
 </resources>

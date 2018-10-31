@@ -51,8 +51,8 @@ public class ViewUtil {
             lastClickTime = 0;
         }
         long time = System.currentTimeMillis();
-        long timeD = time - lastClickTime;
-        if (0 < timeD && timeD < interval) {
+        long timeGap = time - lastClickTime;
+        if (0 < timeGap && timeGap < interval) {
             return true;
         }
         lastClickTime = time;
