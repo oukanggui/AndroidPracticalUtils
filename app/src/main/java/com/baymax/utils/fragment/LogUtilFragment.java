@@ -1,7 +1,10 @@
 package com.baymax.utils.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
+import android.support.v4.content.FileProvider;
 import android.view.View;
 import android.widget.Button;
 
@@ -9,6 +12,8 @@ import com.baymax.utils.R;
 import com.baymax.utils.base.BaseContentFragment;
 import com.baymax.utilslib.LogUtil;
 import com.baymax.utilslib.ToastUtil;
+
+import java.io.File;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -49,16 +54,36 @@ public class LogUtilFragment extends BaseContentFragment {
                     ToastUtil.showToast(mActivity, "请先打印日志");
                     return;
                 }
-                Intent intent = new Intent("android.intent.action.VIEW");
-                intent.addCategory("android.intent.category.DEFAULT");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                Uri uri = Uri.fromFile(LogUtil.getCurrentLogFile());
-                intent.setDataAndType(uri, "text/plain");
-                startActivity(intent);
+                try {
+                    Intent intent = new Intent("android.intent.action.VIEW");
+                    intent.addCategory("android.intent.category.DEFAULT");
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    //需要intent需要加入下面flags,否则无法打开文件
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    Uri uri = getUriForFile(mActivity, LogUtil.getCurrentLogFile());
+                    intent.setDataAndType(uri, "text/plain");
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    ToastUtil.showToast(mActivity, "手机上没有可打开该类型文件的软件");
+                }
                 break;
             default:
                 break;
         }
+    }
+
+    private static Uri getUriForFile(Context context, File file) {
+        if (context == null || file == null) {
+            throw new NullPointerException();
+        }
+        Uri uri;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            uri = FileProvider.getUriForFile(context.getApplicationContext(), "com.baymax.utils.fileprovider", file);
+        } else {
+            uri = Uri.fromFile(file);
+        }
+        return uri;
     }
 
 }
