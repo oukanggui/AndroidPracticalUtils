@@ -214,9 +214,7 @@ View操作相关工具类ViewUtil，目前支持功能如下：<br>
 |方法名|功能说明|
 |:---|:---|
 |boolean isFastDoubleClick()|判断两次点击之间是否存在快速点击,默认两次点击时间间隔阈值为800ms|
-|boolean isFastDoubleClick(long interval)|判断两次点击之间是否存在快速点击，interval为两次点击时间间隔阈值|
-|boolean isFastDoubleClick(boolean isReset)|判断两次点击之间是否存在快速点击,默认两次点击时间间隔阈值为800ms,isReset 需要是要重置（由于记录上次点击时间是采用static的形式，防止在两个不同控件之间快速点击存在误判）|
-|boolean isFastDoubleClick(long interval, boolean isReset)|判断两次点击之间是否存在快速点击,isReset值含义如上|
+|boolean isFastDoubleClick(long interval,boolean isReset)|判断两次点击之间是否存在快速点击,默认两次点击时间间隔阈值为800ms,isReset标识需要是要重置，默认为false（由于记录上次点击时间是采用static的形式，防止在两个不同控件之间快速点击存在误判）|
 
 ### 持续更新中
 
