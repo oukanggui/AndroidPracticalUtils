@@ -19,6 +19,7 @@ Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与
 其中T为泛型对象，在实际使用时替换为具体的实体类即可<br>
 
 **示例如下所示：**<br>
+
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_json.gif)
 ### 2、TextUtil:
 Text文本操作工具类TextUtil，目前支持功能如下：<br>
@@ -34,6 +35,10 @@ Text文本操作工具类TextUtil，目前支持功能如下：<br>
 |boolean isBlank(final CharSequence s)|判断字符串是否全为空格|
 |boolean isEmail(String strEmail)|判断一个字符串是否是邮箱格式，目前只是简单的通过字符串中是否含有@来判断|
 |boolean isPhoneNumber(String strPhone)|判断一个字符串是否是11位手机号格式（正则表达式）|
+
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_text.gif)
 
 ### 3、SharedPreferencesUtil
 SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一致，目前支持功能如下：<br>
@@ -59,6 +64,10 @@ SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一
 |void clear(Context context)|清空sp文件保存的内容|
 |void remove(Context context, String key)|移除key对应的内容|
 
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_sp.png)
+
 ### 4、ToastUtil
 Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点击Toast时的显示问题，目前支持功能如下：<br>
 1、Toast显示<br>
@@ -70,6 +79,10 @@ Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点
 |void showToast(final Context context, final CharSequence text, final int duration)|显示Toast|
 |void showToast(Context context, CharSequence text)|显示Toast，默认显示时长duration为Toast.LENGTH_SHORT|
 |void cancelToast()|取消Toast的显示|
+
+**示例如下所示：(从其它工具的演示已经可以看到ToastUtil演示显示的效果~)**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_toast.png)
 
 注：如果想要处理由于连续点击，导致Toast重复显示相同内容的问题或者退出当前页面后，Toast还会显示的问题，可以参考我之前的博客文章的解决方案：[完美解决Android中Toast重复显示相同内容的问题](https://blog.csdn.net/okg0111/article/details/79920375)
 ### 5、LogUtil
@@ -91,6 +104,10 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 |void w(String tag, String msg)|打印Warn level log|
 |void e(String tag, String msg)|打印Error level log|
 
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_log.gif)
+
 ### 6、TimeUtil
 时间Time操作工具类TimeUtil，目前支持功能如下：<br>
 1、获取当前系统时间（格式为yyyy-MM-dd HH:mm:ss的字符串）<br>
@@ -107,6 +124,10 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 |long twoDateGapHours(String startTime, String endTime)|计算两个日期的时间相差多少小时|
 |long twoDateGapDays(String startTime, String endTime)|计算两个日期的时间相差多少天|
 
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_time.gif)
+
 ### 7、SoftInputUtil
 软键盘操作工具类SoftInputUtil，支持功能如下：<br>
 1、软键盘显示（支持绑定view监听输入）<br>
@@ -119,6 +140,10 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 |void hideSoftInput(Context context, View view)|隐藏系统软键盘，其中View为接收输入内容的View|
 |void hideSoftInput(Activity activity)|隐藏系统软键盘|
 
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_softinput.gif)
+
 ### 8、DimenUtil
 Dimen尺寸操作工具类DimenUtil，支持功能如下：<br>
 1、支持sp与px、dp与px之间的互相换算<br>
@@ -130,6 +155,10 @@ Dimen尺寸操作工具类DimenUtil，支持功能如下：<br>
 |int px2dp(Context context, int pxValue)|转换px为dp|
 |int sp2px(Context context, float spValue)|转换sp为px|
 |int px2sp(Context context, float pxValue)|转换px为sp|
+
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_dimen.gif)
 
 ### 9、AppUtil
 App相关工具操作类，支持功能如下：<br>
@@ -149,6 +178,10 @@ App相关工具操作类，支持功能如下：<br>
 |int checkPackageStatus(Context context, String packageName, int versionCode)|判断APP在手机的安装状态（未安装、已安装、更新等）|
 |boolean openApp(Context context, String packageName)|启动第三方APP|
 
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_app.gif)
+
 ### 10、 NetworkUtil
 网络工具操作类NetworkUtil，目前支持功能如下：<br>
 1、获取网络IP地址<br>
@@ -161,6 +194,10 @@ App相关工具操作类，支持功能如下：<br>
 |String getIp()|获取网络IP地址|
 |boolean isNetworkAvailable(Context context)|判断当前网络是否可用|
 |boolean isWifiConnected(Context context)|判断当前网络是否连接WiFi|
+
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_network.gif)
 
 ### 11、DeviceUtil
 设备操作工具类DeviceUtil，目前支持功能如下：<br>
@@ -177,6 +214,10 @@ App相关工具操作类，支持功能如下：<br>
 |String getImei(Context context)|获取设备IMEI号|
 |String getImsi(Context context)|获取SIM卡IMSI序列号|
 |String getMacAddress(Context context)|获取设备Mac地址|
+
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_device.gif)
 
 ### 12、SystemUtil
 System操作工具类SystemUtil,目前支持功能如下：<br>
@@ -199,6 +240,10 @@ System操作工具类SystemUtil,目前支持功能如下：<br>
 |void openSystemBrowser(Context context,String url)|调用系统浏览器打开网页|
 |void openSystemShareChooser(Context context, String title, String text)|打开系统分享选择器|
 
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_system.gif)
+
 ### 13、RunnableUtil
 Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行效率，支持如下功能：<br>
 1、支持Runnable任务task立即以及排队执行<br>
@@ -209,6 +254,10 @@ Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行
 |void runTask(Runnable task)|执行Runnable任务，默认为任务排队执行|
 |runTask(Runnable task, boolean immediate)|执行Runnable任务，immediate值表明任务是否立即执行，true：任务立即执行，false：任务排队执行（默认值）|
 
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_runnable.gif)
+
 ### 14、ViewUtil
 View操作相关工具类ViewUtil，目前支持功能如下：<br>
 1、判断两次点击之间是否存在快速点击（支持重置）<br>
@@ -218,6 +267,10 @@ View操作相关工具类ViewUtil，目前支持功能如下：<br>
 |:---|:---|
 |boolean isFastDoubleClick()|判断两次点击之间是否存在快速点击,默认两次点击时间间隔阈值为800ms|
 |boolean isFastDoubleClick(long interval,boolean isReset)|判断两次点击之间是否存在快速点击,默认两次点击时间间隔阈值为800ms,isReset标识需要是要重置，默认为false（由于记录上次点击时间是采用static的形式，防止在两个不同控件之间快速点击存在误判）|
+
+**示例如下所示：**<br>
+
+![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_view.gif)
 
 ### 持续更新中
 
