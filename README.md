@@ -64,10 +64,6 @@ SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一
 |void clear(Context context)|清空sp文件保存的内容|
 |void remove(Context context, String key)|移除key对应的内容|
 
-**示例如下所示：**<br>
-
-![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_sp.png)
-
 ### 4、ToastUtil
 Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点击Toast时的显示问题，目前支持功能如下：<br>
 1、Toast显示<br>
@@ -81,9 +77,6 @@ Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点
 |void cancelToast()|取消Toast的显示|
 
 **示例如下所示：(从其它工具的演示已经可以看到ToastUtil演示显示的效果~)**<br>
-
-![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_toast.png)
-
 注：如果想要处理由于连续点击，导致Toast重复显示相同内容的问题或者退出当前页面后，Toast还会显示的问题，可以参考我之前的博客文章的解决方案：[完美解决Android中Toast重复显示相同内容的问题](https://blog.csdn.net/okg0111/article/details/79920375)
 ### 5、LogUtil
 日志Log操作工具类，支持日记打印以及输出到文件中进行存储，便于Log记录与持久化存储：<br>
