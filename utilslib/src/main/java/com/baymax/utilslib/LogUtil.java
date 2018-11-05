@@ -28,19 +28,19 @@ public class LogUtil {
     /**
      * log文件存在的文件目录
      */
-    public final static String LOG_DIRNAME = "Log";
+    private final static String LOG_DIRNAME = "log-dir";
     /**
      * log文件存在的文件名
      */
-    public final static String LOG_FILENAME = "text_log";
+    private final static String LOG_FILENAME = "test_log";
     /**
      * log文件保存为.txt文本格式
      */
-    public final static String LOG_FILEEXT = ".txt";
+    private final static String LOG_FILEEXT = ".txt";
     /**
      * log文件保存路径
      */
-    public static String LOG_PATH_SDCARD_DIR;
+    private static String LOG_PATH_SDCARD_DIR;
     /**
      * log文件File对象
      */

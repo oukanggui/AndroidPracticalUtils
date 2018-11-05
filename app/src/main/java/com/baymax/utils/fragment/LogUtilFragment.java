@@ -65,7 +65,7 @@ public class LogUtilFragment extends BaseContentFragment {
                     startActivity(intent);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    ToastUtil.showToast(mActivity, "手机上没有可打开该类型文件的软件");
+                    ToastUtil.showToast(mActivity, "手机上没有可打开该类型文件的软件或请检查是否授予了应用READ_EXTERNAL_STORAGE权限");
                 }
                 break;
             default:
