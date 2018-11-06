@@ -1,7 +1,23 @@
 # AndroidPracticalUtils
 ## 一、初衷
 整理Android日常开发中常用的实用工具Utils，所有工具类均放在utilslib这个library module里面,app module为演示module，有兴趣的同学可以下载阅读或运行demo查看效果
-## 二、支持工具类以及功能说明--支持更新中
+## 二、引用
+1、首先在项目根目录的build.gradle中添加maven依赖：<br>
+```java 
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+2、在项目引用module的build.gradle中添加如下依赖：<br>
+```java 
+dependencies {
+	        implementation 'com.github.oukanggui:AndroidPracticalUtils:v1.0'
+	}
+```
+## 三、支持工具类以及功能说明--持续更新中
 ### 1、JsonUtil：
 Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与Json数据的转换，支持功能如下：<br>
 1、将任意对象或列表转为Json字符串<br>
