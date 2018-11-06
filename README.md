@@ -2,7 +2,7 @@
 ## 一、初衷
 整理Android日常开发中常用的实用工具Utils，所有工具类均放在utilslib这个library module里面,app module为演示module，有兴趣的同学可以下载阅读或运行demo查看效果
 ## 二、引用
-1、首先在项目根目录的build.gradle中添加maven依赖：<br>
+1、首先在项目根目录的build.gradle中添加maven仓库：<br>
 ```java 
 allprojects {
 		repositories {
