@@ -1,6 +1,6 @@
 # AndroidPracticalUtils
 ## 一、初衷
-整理Android日常开发中常用的实用工具Utils，所有工具类均放在utilslib这个library module里面,app module为演示module，有兴趣的同学可以下载阅读或运行demo查看效果
+整理Android日常开发中常用的实用工具Utils，包含Json处理、文本处理、尺寸转换、时间处理、设备信息获取、网络、软键盘、APP、SharedPreferences、Toast、Log、Runnable任务执行管理等实用工具，所有工具类均放在utilslib这个library module里面,app module为演示module，有兴趣的同学可以下载阅读或运行demo查看效果
 ## 二、引用
 1、首先在项目根目录的build.gradle中添加jitpack maven仓库：<br>
 ```java 
@@ -19,7 +19,7 @@ dependencies {
 ```
 ## 三、支持工具类以及功能说明--持续更新中
 ### 1、JsonUtil：
-Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与Json数据的转换，支持功能如下：<br>
+**Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与Json数据的转换，支持功能如下：**<br>
 1、将任意对象或列表转为Json字符串<br>
 2、将Json字符串转换为任意对象或列表(通过泛型)<br>
 **支持具体功能方法使用说明如下：**<br>
@@ -38,7 +38,7 @@ Json操作工具类，利用Gson通过泛型实现任意对象或列表对象与
 
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_json.gif)
 ### 2、TextUtil:
-Text文本操作工具类TextUtil，目前支持功能如下：<br>
+**Text文本操作工具类TextUtil，目前支持功能如下：**<br>
 1、字符串是否为空判断<br>
 2、字符串是否全为空格判断<br>
 3、邮箱格式判断<br>
@@ -57,7 +57,7 @@ Text文本操作工具类TextUtil，目前支持功能如下：<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_text.gif)
 
 ### 3、SharedPreferencesUtil
-SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一致，目前支持功能如下：<br>
+**SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一致，目前支持功能如下：**<br>
 1、save（put）与get：与原生保持一致，支持保存和获取int、float、long、boolean、String、Set\<String\><br>
 2、clear：清空SharedPreferences内容<br>
 3、remove：支持删除remove相应key对应的值<br>
@@ -81,7 +81,7 @@ SharedPreferences操作工具类SharedPreferencesUtil，与原生保持功能一
 |void remove(Context context, String key)|移除key对应的内容|
 
 ### 4、ToastUtil
-Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点击Toast时的显示问题，目前支持功能如下：<br>
+**Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点击Toast时的显示问题，目前支持功能如下：**<br>
 1、Toast显示<br>
 2、Toast取消<br>
 **支持具体功能方法使用说明如下：**<br>
@@ -95,7 +95,7 @@ Toast操作工具类，提供**非阻塞式**显示Toast，防止出现连续点
 **示例如下所示：(从其它工具的演示已经可以看到ToastUtil演示显示的效果~)**<br>
 注：如果想要处理由于连续点击，导致Toast重复显示相同内容的问题或者退出当前页面后，Toast还会显示的问题，可以参考我之前的博客文章的解决方案：[完美解决Android中Toast重复显示相同内容的问题](https://blog.csdn.net/okg0111/article/details/79920375)
 ### 5、LogUtil
-日志Log操作工具类，支持日记打印以及输出到文件中进行存储，便于Log记录与持久化存储：<br>
+**日志Log操作工具类，支持日记打印以及输出到文件中进行存储，便于Log记录与持久化存储：**<br>
 1、Log打印到控制台<br>
 2、Log输出到文件保存进行持久化存储<br>
 使用注意事项：<br>
@@ -118,7 +118,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_log.gif)
 
 ### 6、TimeUtil
-时间Time操作工具类TimeUtil，目前支持功能如下：<br>
+**时间Time操作工具类TimeUtil，目前支持功能如下：**<br>
 1、获取当前系统时间（格式为yyyy-MM-dd HH:mm:ss的字符串）<br>
 2、判断两个日期是否为同一天（yyyy-MM-dd HH:mm:ss格式的日期）<br>
 3、判断两个时间之间的相隔的秒数、分钟数、小时数以及天数<br>
@@ -138,7 +138,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_time.gif)
 
 ### 7、SoftInputUtil
-软键盘操作工具类SoftInputUtil，支持功能如下：<br>
+**软键盘操作工具类SoftInputUtil，支持功能如下：**<br>
 1、软键盘显示（支持绑定view监听输入）<br>
 2、软键盘隐藏（收起）<br>
 **支持具体功能方法使用说明如下：**<br>
@@ -154,7 +154,7 @@ b、isWriteToFile，日志是否写到文件，默认关闭<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_softinput.gif)
 
 ### 8、DimenUtil
-Dimen尺寸操作工具类DimenUtil，支持功能如下：<br>
+**Dimen尺寸操作工具类DimenUtil，支持功能如下：**<br>
 1、支持sp与px、dp与px之间的互相换算<br>
 **支持具体功能方法使用说明如下：**<br>
 
@@ -170,7 +170,7 @@ Dimen尺寸操作工具类DimenUtil，支持功能如下：<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_dimen.gif)
 
 ### 9、AppUtil
-App相关工具操作类，支持功能如下：<br>
+**App相关工具操作类，支持功能如下：**<br>
 1、获取自身以及第三方应用版本名称以及版本号<br>
 2、检测某应用是否已安装<br>
 3、获取某应用在手机的状态（更新、已安装、未安装等）<br>
@@ -192,7 +192,7 @@ App相关工具操作类，支持功能如下：<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_app.gif)
 
 ### 10、 NetworkUtil
-网络工具操作类NetworkUtil，目前支持功能如下：<br>
+**网络工具操作类NetworkUtil，目前支持功能如下：**<br>
 1、获取网络IP地址<br>
 2、判断网络是否可用<br>
 3、判断当前网络是否连接WiFi<br>
@@ -209,7 +209,7 @@ App相关工具操作类，支持功能如下：<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_network.gif)
 
 ### 11、DeviceUtil
-设备操作工具类DeviceUtil，目前支持功能如下：<br>
+**设备操作工具类DeviceUtil，目前支持功能如下：**<br>
 1、获取设备屏幕宽度和高度大小<br>
 2、获取设备IMEI号<br>
 3、获取SIM卡IMSI号<br>
@@ -229,7 +229,7 @@ App相关工具操作类，支持功能如下：<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_device.gif)
 
 ### 12、SystemUtil
-System操作工具类SystemUtil,目前支持功能如下：<br>
+**System操作工具类SystemUtil,目前支持功能如下：**<br>
 1、判断SD卡是否可用<br>
 2、获取SD卡路径<br>
 3、获取系统型号<br>
@@ -254,7 +254,7 @@ System操作工具类SystemUtil,目前支持功能如下：<br>
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_system.gif)
 
 ### 13、RunnableUtil
-Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行效率，支持如下功能：<br>
+**Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行效率，支持如下功能：**<br>
 1、支持Runnable任务task立即以及排队执行<br>
 **支持具体功能方法使用说明如下：**<br>
 
@@ -268,7 +268,7 @@ Runnable操作工具类RunnableUtil，通过内置线程池，提高任务执行
 ![](https://raw.githubusercontent.com/oukanggui/AndroidPracticalUtils/master/app/src/main/assets/util_runnable.gif)
 
 ### 14、ViewUtil
-View操作相关工具类ViewUtil，目前支持功能如下：<br>
+**View操作相关工具类ViewUtil，目前支持功能如下：**<br>
 1、判断两次点击之间是否存在快速点击（支持重置）<br>
 **支持具体功能方法使用说明如下：**<br>
 
